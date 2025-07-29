@@ -23,19 +23,19 @@ const Landing = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Ananya Singh',
       role: 'College Student',
       content: 'SocialSage helped me reduce my Instagram time by 70% and focus on my studies.',
       rating: 5,
     },
     {
-      name: 'Mike Chen',
+      name: 'Vikram Reddy',
       role: 'Graduate Student',
       content: 'The daily check-ins and suggestions really keep me motivated and accountable.',
       rating: 5,
     },
     {
-      name: 'Emma Davis',
+      name: 'Sneha Gupta',
       role: 'High School Student',
       content: 'I love the chatbot feature - it feels like having a personal coach.',
       rating: 5,

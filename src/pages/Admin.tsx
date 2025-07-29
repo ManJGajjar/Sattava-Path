@@ -12,11 +12,11 @@ const Admin = () => {
 
   // Mock admin data
   const users = [
-    { id: 1, name: 'Alex Johnson', email: 'alex@email.com', status: 'Active', checkins: 15, lastActive: '2 hours ago' },
-    { id: 2, name: 'Sarah Chen', email: 'sarah@email.com', status: 'Active', checkins: 22, lastActive: '1 day ago' },
-    { id: 3, name: 'Mike Davis', email: 'mike@email.com', status: 'Inactive', checkins: 5, lastActive: '5 days ago' },
-    { id: 4, name: 'Emma Wilson', email: 'emma@email.com', status: 'Active', checkins: 31, lastActive: '3 hours ago' },
-    { id: 5, name: 'Ryan Brown', email: 'ryan@email.com', status: 'Active', checkins: 18, lastActive: '1 hour ago' },
+    { id: 1, name: 'Arjun Sharma', email: 'arjun@email.com', status: 'Active', checkins: 15, lastActive: '2 hours ago' },
+    { id: 2, name: 'Kavya Iyer', email: 'kavya@email.com', status: 'Active', checkins: 22, lastActive: '1 day ago' },
+    { id: 3, name: 'Ravi Gupta', email: 'ravi@email.com', status: 'Inactive', checkins: 5, lastActive: '5 days ago' },
+    { id: 4, name: 'Meera Joshi', email: 'meera@email.com', status: 'Active', checkins: 31, lastActive: '3 hours ago' },
+    { id: 5, name: 'Kiran Singh', email: 'kiran@email.com', status: 'Active', checkins: 18, lastActive: '1 hour ago' },
   ];
 
   const handleBroadcastMessage = () => {

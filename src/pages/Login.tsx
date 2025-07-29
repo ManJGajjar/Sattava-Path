@@ -113,8 +113,8 @@ const Login = () => {
         <div className="card-floating p-4 bg-blue-50 border-blue-200 animate-slide-up">
           <h3 className="font-medium text-blue-900 mb-2">Demo Credentials:</h3>
           <div className="text-sm text-blue-700 space-y-1">
-            <p><strong>Admin:</strong> admin@socialsage.com / admin123</p>
-            <p><strong>Student:</strong> student@socialsage.com / student123</p>
+            <p><strong>Admin (Arjun):</strong> admin@socialsage.com / admin123</p>
+            <p><strong>Student (Priya):</strong> student@socialsage.com / student123</p>
           </div>
         </div>
 

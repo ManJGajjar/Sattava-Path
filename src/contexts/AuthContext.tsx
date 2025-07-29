@@ -49,7 +49,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (email === 'admin@socialsage.com' && password === 'admin123') {
       const adminUser: User = {
         id: '1',
-        name: 'Admin User',
+        name: 'Arjun Sharma',
         email: 'admin@socialsage.com',
         role: 'admin',
         avatar: '👨‍💼'
@@ -61,10 +61,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } else if (email === 'student@socialsage.com' && password === 'student123') {
       const studentUser: User = {
         id: '2',
-        name: 'Alex Student',
+        name: 'Priya Patel',
         email: 'student@socialsage.com',
         role: 'user',
-        avatar: '👨‍🎓'
+        avatar: '👩‍🎓'
       };
       setUser(studentUser);
       localStorage.setItem('socialsage_user', JSON.stringify(studentUser));
@@ -84,7 +84,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     
     const googleUser: User = {
       id: '3',
-      name: 'Google User',
+      name: 'Rohit Kumar',
       email: 'user@gmail.com',
       role: 'user',
       avatar: '🌟'
