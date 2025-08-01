@@ -4,109 +4,104 @@
 @tailwind components;
 @tailwind utilities;
 
-/* SocialSage Design System - Calming colors for productivity */
+/* SattvaPath Design System - Vedic colors for spiritual awakening */
 
 @layer base {
   :root {
-    /* Calming purple and blue palette */
-    --background: 250 100% 98%;
-    --foreground: 260 15% 15%;
+    /* Light theme - Vedic/Spiritual color palette */
+    --background: 45 100% 97%;          /* Warm cream */
+    --foreground: 20 15% 15%;           /* Deep brown */
+    --card: 0 0% 100%;                  /* Pure white */
+    --card-foreground: 20 15% 15%;      /* Deep brown */
+    --popover: 0 0% 100%;               /* Pure white */
+    --popover-foreground: 20 15% 15%;   /* Deep brown */
+    --primary: 25 100% 50%;             /* Saffron orange */
+    --primary-foreground: 0 0% 100%;    /* White */
+    --primary-hover: 25 100% 45%;       /* Darker saffron */
+    --primary-glow: 25 100% 65%;        /* Lighter saffron */
+    --secondary: 180 50% 35%;           /* Peacock green */
+    --secondary-foreground: 0 0% 100%;  /* White */
+    --muted: 45 30% 92%;                /* Light cream */
+    --muted-foreground: 20 15% 50%;     /* Medium brown */
+    --accent: 0 65% 45%;                /* Deep maroon */
+    --accent-foreground: 0 0% 100%;     /* White */
+    --destructive: 0 84% 60%;           /* Red */
+    --destructive-foreground: 0 0% 98%; /* White */
+    --border: 45 20% 88%;               /* Soft cream border */
+    --input: 45 20% 88%;                /* Soft cream input */
+    --ring: 25 100% 50%;                /* Saffron ring */
+    --chart-1: 25 100% 50%;             /* Saffron */
+    --chart-2: 180 50% 35%;             /* Peacock green */
+    --chart-3: 0 65% 45%;               /* Deep maroon */
+    --chart-4: 45 80% 60%;              /* Golden yellow */
+    --chart-5: 280 60% 50%;             /* Purple */
+    --radius: 0.75rem;
+    --success: 120 50% 50%;
+    --warning: 45 100% 60%;
+    --info: 210 100% 60%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 260 15% 15%;
+    /* Vedic gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(45 100% 97%) 0%, hsl(25 100% 95%) 50%, hsl(180 30% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(45 50% 98%) 100%);
+    --gradient-spiritual: linear-gradient(135deg, hsl(25 100% 50%) 0%, hsl(0 65% 45%) 100%);
+    --gradient-peace: linear-gradient(135deg, hsl(180 50% 35%) 0%, hsl(200 40% 50%) 100%);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 260 15% 15%;
+    /* Spiritual shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-floating: 0 8px 32px -8px hsl(25 100% 50% / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    --shadow-temple: 0 20px 60px -10px hsl(20 15% 15% / 0.1);
 
-    /* Primary: Soft purple */
-    --primary: 266 84% 65%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 266 84% 60%;
-
-    /* Secondary: Light purple */
-    --secondary: 266 100% 96%;
-    --secondary-foreground: 266 84% 45%;
-
-    /* Success: Calming teal */
-    --success: 174 72% 56%;
-    --success-foreground: 0 0% 100%;
-
-    /* Muted: Very light purple */
-    --muted: 260 20% 96%;
-    --muted-foreground: 260 10% 45%;
-
-    /* Accent: Soft blue */
-    --accent: 216 100% 88%;
-    --accent-foreground: 216 84% 25%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 260 20% 92%;
-    --input: 260 20% 96%;
-    --ring: 266 84% 65%;
-
-    --radius: 1rem;
-
-    /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(266 84% 65%), hsl(216 84% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(266 100% 95%), hsl(216 100% 95%));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(260 20% 98%));
-
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(266 84% 65% / 0.15);
-    --shadow-card: 0 2px 10px -2px hsl(260 10% 45% / 0.1);
-    --shadow-floating: 0 8px 30px -8px hsl(266 84% 65% / 0.25);
-
-    /* Animations */
+    /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-meditative: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark theme - Night temple colors */
+    --background: 20 30% 8%;            /* Deep brown-black */
+    --foreground: 45 30% 95%;           /* Warm cream */
+    --card: 20 25% 12%;                 /* Dark brown */
+    --card-foreground: 45 30% 95%;      /* Warm cream */
+    --popover: 20 25% 12%;              /* Dark brown */
+    --popover-foreground: 45 30% 95%;   /* Warm cream */
+    --primary: 25 100% 60%;             /* Bright saffron */
+    --primary-foreground: 20 30% 8%;    /* Deep brown-black */
+    --primary-hover: 25 100% 65%;       /* Brighter saffron */
+    --primary-glow: 25 100% 70%;        /* Brightest saffron */
+    --secondary: 180 40% 45%;           /* Darker peacock green */
+    --secondary-foreground: 0 0% 100%;  /* White */
+    --muted: 20 25% 16%;                /* Dark brown muted */
+    --muted-foreground: 45 15% 65%;     /* Light brown */
+    --accent: 0 65% 55%;                /* Bright maroon */
+    --accent-foreground: 0 0% 100%;     /* White */
+    --destructive: 0 84% 60%;           /* Red */
+    --destructive-foreground: 0 0% 98%; /* White */
+    --border: 20 25% 20%;               /* Dark brown border */
+    --input: 20 25% 20%;                /* Dark brown input */
+    --ring: 25 100% 60%;                /* Bright saffron ring */
+    --chart-1: 25 100% 60%;             /* Bright saffron */
+    --chart-2: 180 40% 45%;             /* Darker peacock green */
+    --chart-3: 0 65% 55%;               /* Bright maroon */
+    --chart-4: 45 80% 70%;              /* Bright golden */
+    --chart-5: 280 60% 60%;             /* Bright purple */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Dark theme gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(20 25% 12%) 50%, hsl(180 20% 15%) 100%);
+    --shadow-floating: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    --shadow-temple: 0 20px 60px -10px hsl(0 0% 0% / 0.3);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -129,55 +124,55 @@
 }
 
 @layer components {
-  /* Button variants using design system */
+  /* Button variants using Vedic design system */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-floating)] active:scale-95;
+    @apply bg-gradient-spiritual text-white font-spiritual font-semibold text-lg px-8 py-4 rounded-2xl shadow-elegant hover:shadow-glow transform hover:scale-105 transition-all duration-300 border-0;
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-primary/90 hover:shadow-[var(--shadow-soft)] active:scale-95;
+    @apply bg-primary text-primary-foreground font-spiritual font-medium px-6 py-3 rounded-xl hover:bg-primary-hover transition-colors duration-200 shadow-sm;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-secondary/80 hover:shadow-[var(--shadow-card)] active:scale-95;
+    @apply bg-secondary text-secondary-foreground font-spiritual font-medium px-6 py-3 rounded-xl hover:bg-secondary/80 transition-colors duration-200;
   }
 
   .btn-success {
-    @apply bg-success text-success-foreground px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-success/90 hover:shadow-[var(--shadow-soft)] active:scale-95;
+    @apply bg-success text-white font-spiritual font-medium px-6 py-3 rounded-xl hover:bg-success/90 transition-colors duration-200;
   }
 
-  /* Card variants */
+  /* Spiritual card variants */
   .card-gradient {
-    @apply bg-gradient-to-br from-white to-muted shadow-[var(--shadow-card)] border border-border rounded-2xl;
+    @apply bg-gradient-card shadow-floating border border-border rounded-2xl;
   }
 
   .card-floating {
-    @apply bg-white shadow-[var(--shadow-floating)] border border-border rounded-2xl transition-all duration-300 hover:shadow-[var(--shadow-floating)] hover:-translate-y-1;
+    @apply bg-white shadow-floating border border-border rounded-2xl transition-all duration-300 hover:shadow-temple hover:-translate-y-1;
   }
 
   /* Input styling */
   .input-modern {
-    @apply bg-input border border-border rounded-xl px-4 py-3 transition-all duration-300 focus:ring-2 focus:ring-ring focus:border-transparent placeholder:text-muted-foreground;
+    @apply bg-input border border-border rounded-xl px-4 py-3 transition-all duration-300 focus:ring-2 focus:ring-ring focus:border-transparent placeholder:text-muted-foreground font-spiritual;
   }
 
-  /* Animations */
+  /* Spiritual animations */
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
+    animation: slideUp 0.8s ease-out forwards;
   }
 
   .animate-bounce-in {
-    animation: bounceIn 0.8s ease-out forwards;
+    animation: bounceIn 1s ease-out forwards;
   }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -188,7 +183,7 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -202,7 +197,7 @@
     transform: scale(0.3);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   70% {
     transform: scale(0.9);

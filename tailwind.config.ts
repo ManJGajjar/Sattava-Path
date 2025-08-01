@@ -20,6 +20,8 @@ export default {
 		extend: {
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
+				sanskrit: ['Noto Sans Devanagari', 'serif'],
+				spiritual: ['Crimson Text', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -75,15 +77,21 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)',
+				'gradient-spiritual': 'var(--gradient-spiritual)',
+				'gradient-peace': 'var(--gradient-peace)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'card': 'var(--shadow-card)',
 				'floating': 'var(--shadow-floating)',
+				'elegant': 'var(--shadow-elegant)',
+				'glow': 'var(--shadow-glow)',
+				'temple': 'var(--shadow-temple)',
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
 				'spring': 'var(--transition-spring)',
+				'meditative': 'var(--transition-meditative)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
