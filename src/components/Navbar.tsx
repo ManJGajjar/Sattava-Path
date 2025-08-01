@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Flower2, User, LogOut } from 'lucide-react';
+import { Menu, X, Sun, User, LogOut } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
-              <Flower2 className="h-8 w-8 text-primary" />
+              <Sun className="h-8 w-8 text-primary" />
               <span className="font-spiritual font-bold text-xl bg-gradient-spiritual bg-clip-text text-transparent">
                 SattvaPath
               </span>
@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/dashboard" className="flex items-center space-x-2">
-            <Flower2 className="h-8 w-8 text-primary" />
+            <Sun className="h-8 w-8 text-primary" />
             <span className="font-spiritual font-bold text-xl bg-gradient-spiritual bg-clip-text text-transparent">
               SattvaPath
             </span>

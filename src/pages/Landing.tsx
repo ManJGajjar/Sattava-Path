@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Flower2, BookOpen, Heart, Users, Star, Sun, Leaf } from 'lucide-react';
+import { Sun, BookOpen, Heart, Users, Star, Leaf } from 'lucide-react';
 import templeHero from '@/assets/temple-sunrise-hero.jpg';
 import lotusImage from '@/assets/lotus-meditation.jpg';
 
@@ -67,7 +67,7 @@ const Landing = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-3xl space-y-8 animate-fade-in">
             <div className="flex items-center space-x-4 mb-8">
-              <Flower2 className="h-16 w-16 text-primary animate-pulse" />
+              <Sun className="h-16 w-16 text-primary animate-pulse" />
               <h1 className="text-6xl sm:text-8xl font-spiritual font-bold bg-gradient-spiritual bg-clip-text text-transparent">
                 SattvaPath
               </h1>
@@ -285,7 +285,7 @@ const Landing = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div className="col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <Flower2 className="h-10 w-10 text-primary" />
+                <Sun className="h-10 w-10 text-primary" />
                 <span className="font-spiritual font-bold text-2xl">SattvaPath</span>
               </div>
               <p className="text-background/70 max-w-md font-spiritual leading-relaxed mb-6">
