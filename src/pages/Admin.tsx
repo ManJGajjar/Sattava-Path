@@ -67,7 +67,7 @@ const Admin = () => {
           Admin Dashboard 👨‍💼
         </h1>
         <p className="text-muted-foreground">
-          Monitor user engagement and manage the SocialSage platform
+          Monitor user engagement and guide seekers on their SattvaPath journey
         </p>
       </div>
 

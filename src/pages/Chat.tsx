@@ -14,7 +14,7 @@ const Chat = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hi there! I'm your personal SocialSage coach. I'm here to help you build healthier digital habits. What would you like to talk about today?",
+      text: "Namaste! I'm your personal SattvaPath guide. I'm here to help you build mindful digital habits through the wisdom of the Bhagavad Gita. What would you like to explore today?",
       isUser: false,
       timestamp: new Date(),
     },
@@ -121,15 +121,15 @@ const Chat = () => {
       {/* Header */}
       <div className="text-center mb-8 animate-fade-in">
         <div className="flex items-center justify-center space-x-3 mb-4">
-          <div className="p-3 bg-gradient-primary rounded-2xl">
+          <div className="p-3 bg-gradient-spiritual rounded-2xl">
             <Brain className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-foreground">
-            SocialSage Coach
+          <h1 className="text-3xl font-spiritual font-bold text-foreground">
+            SattvaPath Guide
           </h1>
         </div>
         <p className="text-muted-foreground">
-          Your personal AI coach for building healthier digital habits
+          Your AI guide for mindful living and digital wisdom through ancient teachings
         </p>
       </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Brain, Mail, Lock, Eye, EyeOff, Chrome } from 'lucide-react';
+import { Sun, Mail, Lock, Eye, EyeOff, Chrome } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
 
@@ -51,7 +51,7 @@ const Login = () => {
       } else {
         toast({
           title: 'Login failed',
-          description: 'Invalid email or password. Try admin@socialsage.com / admin123',
+          description: 'Invalid email or password. Please check your credentials and try again.',
           variant: 'destructive',
         });
       }
@@ -98,24 +98,17 @@ const Login = () => {
         {/* Header */}
         <div className="text-center animate-fade-in">
           <Link to="/" className="flex items-center justify-center space-x-2 mb-8">
-            <Brain className="h-12 w-12 text-primary" />
-            <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              SocialSage
+            <div className="p-2 bg-gradient-spiritual rounded-2xl">
+              <Sun className="h-8 w-8 text-white" />
+            </div>
+            <span className="text-3xl font-spiritual font-bold bg-gradient-spiritual bg-clip-text text-transparent">
+              SattvaPath
             </span>
           </Link>
-          <h2 className="text-2xl font-bold text-foreground">Welcome back</h2>
+          <h2 className="text-2xl font-bold text-foreground">Begin Your Journey with SattvaPath</h2>
           <p className="text-muted-foreground mt-2">
-            Sign in to continue your journey
+            Sign in to access your personal growth dashboard
           </p>
-        </div>
-
-        {/* Demo Credentials */}
-        <div className="card-floating p-4 bg-blue-50 border-blue-200 animate-slide-up">
-          <h3 className="font-medium text-blue-900 mb-2">Demo Credentials:</h3>
-          <div className="text-sm text-blue-700 space-y-1">
-            <p><strong>Admin (Arjun):</strong> admin@socialsage.com / admin123</p>
-            <p><strong>Student (Priya):</strong> student@socialsage.com / student123</p>
-          </div>
         </div>
 
         {/* Login Form */}
@@ -167,6 +160,7 @@ const Login = () => {
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                 </button>
@@ -179,10 +173,18 @@ const Login = () => {
             {/* Remember me & Forgot password */}
             <div className="flex items-center justify-between">
               <label className="flex items-center space-x-2">
-                <input type="checkbox" className="rounded border-border" />
-                <span className="text-sm text-muted-foreground">Remember me</span>
+                <input 
+                  type="checkbox" 
+                  className="rounded border-border" 
+                  aria-describedby="remember-me-description"
+                />
+                <span id="remember-me-description" className="text-sm text-muted-foreground">Remember me</span>
               </label>
-              <a href="#" className="text-sm text-primary hover:text-primary-hover transition-colors">
+              <a 
+                href="#" 
+                className="text-sm text-primary hover:text-primary-hover transition-colors"
+                aria-label="Reset your password"
+              >
                 Forgot password?
               </a>
             </div>
@@ -213,15 +215,20 @@ const Login = () => {
             onClick={handleGoogleLogin}
             disabled={isLoading}
             className="w-full flex items-center justify-center space-x-2 btn-secondary"
+            aria-label="Sign in with Google account"
           >
-            <Chrome className="h-5 w-5" />
+            <Chrome className="h-5 w-5" aria-hidden="true" />
             <span>Sign in with Google</span>
           </button>
 
           {/* Sign up link */}
           <p className="text-center text-sm text-muted-foreground mt-6">
             Don't have an account?{' '}
-            <a href="#" className="text-primary hover:text-primary-hover font-medium transition-colors">
+            <a 
+              href="#" 
+              className="text-primary hover:text-primary-hover font-medium transition-colors"
+              aria-label="Create a new SattvaPath account"
+            >
               Sign up for free
             </a>
           </p>

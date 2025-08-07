@@ -102,8 +102,10 @@ const CheckIn = () => {
                         ? 'bg-primary/10 ring-2 ring-primary scale-105'
                         : 'bg-muted hover:bg-muted/80'
                     }`}
+                    aria-label={`Select mood: ${moodOption.label}`}
+                    aria-pressed={mood === moodOption.value}
                   >
-                    <div className="text-4xl mb-2">{moodOption.emoji}</div>
+                    <div className="text-4xl mb-2" aria-hidden="true">{moodOption.emoji}</div>
                     <div className={`text-xs font-medium ${
                       mood === moodOption.value ? 'text-primary' : 'text-muted-foreground'
                     }`}>
@@ -166,6 +168,8 @@ const CheckIn = () => {
                 onChange={(e) => setNotes(e.target.value)}
                 placeholder="Today I felt... I struggled with... I'm proud that I..."
                 className="input-modern w-full h-32 resize-none"
+                aria-label="Daily reflection notes (optional)"
+                rows={4}
               />
             </div>
 

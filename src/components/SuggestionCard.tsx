@@ -32,12 +32,27 @@ const SuggestionCard: React.FC<SuggestionCardProps> = ({
   };
 
   return (
-    <div className="card-floating p-6 group cursor-pointer" onClick={onTryNow}>
+    <div 
+      className="card-floating p-6 group cursor-pointer hover:shadow-floating transition-shadow" 
+      onClick={onTryNow}
+      role="button"
+      tabIndex={0}
+      aria-label={`Try ${title} - ${difficulty} difficulty ${category} activity`}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onTryNow?.();
+        }
+      }}
+    >
       <div className="flex items-start justify-between mb-4">
-        <div className="p-3 bg-gradient-primary rounded-xl text-white">
+        <div className="p-3 bg-gradient-primary rounded-xl text-white" aria-hidden="true">
           <Icon className="h-6 w-6" />
         </div>
-        <span className={`text-xs px-2 py-1 rounded-full border ${getDifficultyColor(difficulty)}`}>
+        <span 
+          className={`text-xs px-2 py-1 rounded-full border ${getDifficultyColor(difficulty)}`}
+          aria-label={`Difficulty: ${difficulty}`}
+        >
           {difficulty}
         </span>
       </div>
@@ -56,7 +71,7 @@ const SuggestionCard: React.FC<SuggestionCardProps> = ({
           {description}
         </p>
 
-        <div className="flex items-center text-primary font-medium text-sm pt-2 group-hover:translate-x-1 transition-transform">
+        <div className="flex items-center text-primary font-medium text-sm pt-2 group-hover:translate-x-1 transition-transform" aria-hidden="true">
           <span>Try this today</span>
           <ArrowRight className="h-4 w-4 ml-2" />
         </div>

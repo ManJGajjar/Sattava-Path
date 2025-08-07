@@ -33,7 +33,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Simulate loading user from localStorage
   useEffect(() => {
-    const savedUser = localStorage.getItem('socialsage_user');
+    const savedUser = localStorage.getItem('sattvapath_user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
     }
@@ -46,28 +46,28 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     // Demo credentials
-    if (email === 'admin@socialsage.com' && password === 'admin123') {
-      const adminUser: User = {
+    if (email === 'seeker@sattvapath.com' && password === 'seeker123') {
+      const seekerUser: User = {
         id: '1',
         name: 'Arjun Sharma',
-        email: 'admin@socialsage.com',
+        email: 'seeker@sattvapath.com',
         role: 'admin',
-        avatar: '👨‍💼'
+        avatar: '🧘‍♂️'
       };
-      setUser(adminUser);
-      localStorage.setItem('socialsage_user', JSON.stringify(adminUser));
+      setUser(seekerUser);
+      localStorage.setItem('sattvapath_user', JSON.stringify(seekerUser));
       setIsLoading(false);
       return true;
-    } else if (email === 'student@socialsage.com' && password === 'student123') {
+    } else if (email === 'student@sattvapath.com' && password === 'student123') {
       const studentUser: User = {
         id: '2',
         name: 'Priya Patel',
-        email: 'student@socialsage.com',
+        email: 'student@sattvapath.com',
         role: 'user',
-        avatar: '👩‍🎓'
+        avatar: '🌸'
       };
       setUser(studentUser);
-      localStorage.setItem('socialsage_user', JSON.stringify(studentUser));
+      localStorage.setItem('sattvapath_user', JSON.stringify(studentUser));
       setIsLoading(false);
       return true;
     }
@@ -87,18 +87,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       name: 'Rohit Kumar',
       email: 'user@gmail.com',
       role: 'user',
-      avatar: '🌟'
+      avatar: '🕉️'
     };
     
     setUser(googleUser);
-    localStorage.setItem('socialsage_user', JSON.stringify(googleUser));
+    localStorage.setItem('sattvapath_user', JSON.stringify(googleUser));
     setIsLoading(false);
     return true;
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('socialsage_user');
+    localStorage.removeItem('sattvapath_user');
   };
 
   return (

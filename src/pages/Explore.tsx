@@ -144,10 +144,10 @@ const Explore = () => {
       {/* Header */}
       <div className="text-center mb-8 animate-fade-in">
         <h1 className="text-3xl font-bold text-foreground mb-2">
-          Explore Healthy Activities 🌟
+          Explore Mindful Activities 🌟
         </h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Discover engaging alternatives to social media. Build new skills, improve your wellbeing, and find activities you actually enjoy.
+          Discover engaging alternatives to digital distractions. Build new skills, improve your wellbeing, and find activities that nourish your soul through ancient wisdom.
         </p>
       </div>
 
@@ -162,6 +162,7 @@ const Explore = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="input-modern pl-10 w-full"
+            aria-label="Search for mindful activities"
           />
         </div>
 
@@ -176,10 +177,12 @@ const Explore = () => {
                   ? 'bg-primary text-primary-foreground scale-105'
                   : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
               }`}
+              aria-label={`Filter by ${category.name} category (${category.count} activities)`}
+              aria-pressed={selectedCategory === category.name}
             >
-              <category.icon className="h-4 w-4" />
+              <category.icon className="h-4 w-4" aria-hidden="true" />
               <span>{category.name}</span>
-              <span className="bg-white/20 text-xs px-2 py-0.5 rounded-full">
+              <span className="bg-white/20 text-xs px-2 py-0.5 rounded-full" aria-label={`${category.count} activities`}>
                 {category.count}
               </span>
             </button>
@@ -223,6 +226,7 @@ const Explore = () => {
               setSelectedCategory('All');
             }}
             className="btn-primary"
+            aria-label="Clear search and show all activities"
           >
             View All Activities
           </button>
@@ -288,10 +292,16 @@ const Explore = () => {
           Small, consistent actions lead to big changes!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="btn-primary">
+          <button 
+            className="btn-primary"
+            aria-label="Suggest a new mindful activity to add to the collection"
+          >
             Suggest New Activity
           </button>
-          <button className="btn-secondary">
+          <button 
+            className="btn-secondary"
+            aria-label="Create your own personalized spiritual challenge"
+          >
             Create Personal Challenge
           </button>
         </div>
