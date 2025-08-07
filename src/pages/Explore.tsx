@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, BookOpen, Dumbbell, Brain, Users, Music, Palette } from 'lucide-react';
+import { Search, Filter, BookOpen, Dumbbell, Brain, Users, Music, Palette, Sun, Sparkles, Heart } from 'lucide-react';
 import SuggestionCard from '@/components/SuggestionCard';
 
 const Explore = () => {
@@ -109,6 +109,31 @@ const Explore = () => {
     return matchesSearch && matchesCategory;
   });
 
+  // Bhagavad Gita activities
+  const gitaActivities = [
+    {
+      title: 'Verse of the Day',
+      description: 'Reflect on a carefully selected shloka from the Bhagavad Gita with Sanskrit, Hindi, and English translations.',
+      icon: Sun,
+      category: 'Gita Wisdom',
+      difficulty: 'Easy' as const,
+    },
+    {
+      title: 'Guided Gita Reflections',
+      description: 'Join a 15-minute guided meditation on key teachings from Krishna to Arjuna about dharma and purpose.',
+      icon: Heart,
+      category: 'Gita Wisdom',
+      difficulty: 'Medium' as const,
+    },
+    {
+      title: 'Daily Gita Audio',
+      description: 'Listen to beautiful Sanskrit recitations with detailed commentary on how to apply timeless wisdom in modern life.',
+      icon: Sparkles,
+      category: 'Gita Wisdom',
+      difficulty: 'Easy' as const,
+    },
+  ];
+
   const handleTryActivity = (title: string) => {
     console.log('Trying activity:', title);
     // In a real app, this could track engagement, save to user's activity list, etc.
@@ -203,6 +228,55 @@ const Explore = () => {
           </button>
         </div>
       )}
+
+      {/* Bhagavad Gita Wisdom Section */}
+      <div className="mb-12 animate-fade-in">
+        <div className="text-center mb-8">
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <Sun className="h-8 w-8 text-primary animate-pulse" />
+            <h2 className="text-3xl font-spiritual font-bold bg-gradient-spiritual bg-clip-text text-transparent">
+              Bhagavad Gita Wisdom
+            </h2>
+            <Sun className="h-8 w-8 text-primary animate-pulse" />
+          </div>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-spiritual">
+            Transform your relationship with technology through timeless spiritual wisdom. 
+            Find peace, purpose, and freedom from digital distractions.
+          </p>
+        </div>
+
+        {/* Gita Activities Grid with Special Styling */}
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          {gitaActivities.map((activity, index) => (
+            <div
+              key={activity.title}
+              className="animate-slide-up relative"
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
+              {/* Spiritual glow effect */}
+              <div className="absolute inset-0 bg-gradient-spiritual opacity-20 rounded-2xl blur-xl"></div>
+              <div className="relative">
+                <SuggestionCard
+                  title={activity.title}
+                  description={activity.description}
+                  icon={activity.icon}
+                  category={activity.category}
+                  difficulty={activity.difficulty}
+                  onTryNow={() => handleTryActivity(activity.title)}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Spiritual Quote */}
+        <div className="text-center p-6 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl border border-primary/10">
+          <blockquote className="text-lg font-spiritual text-foreground italic mb-2">
+            "You have the right to perform your prescribed duty, but not to the fruits of action."
+          </blockquote>
+          <cite className="text-sm text-muted-foreground">— Bhagavad Gita 2.47</cite>
+        </div>
+      </div>
 
       {/* Call to Action */}
       <div className="card-floating p-8 text-center bg-gradient-hero animate-slide-up">
