@@ -317,7 +317,7 @@ const Landing = () => {
           </div>
           <div className="border-t border-background/20 pt-8 text-center">
             <p className="text-background/70 font-spiritual">
-              © 2024 SattvaPath. Spreading ancient wisdom for modern liberation. 
+              © 2025 SattvaPath. Spreading ancient wisdom for modern liberation. 
               <span className="text-primary/80"> ॐ शान्तिः शान्तिः शान्तिः</span>
             </p>
           </div>
